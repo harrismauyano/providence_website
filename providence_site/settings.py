@@ -142,3 +142,6 @@ django_heroku.settings(locals())
 # Set secure proxy SSL header
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# Render PostgreSQL database (optional if you’ll use their database)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
