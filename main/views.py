@@ -20,3 +20,8 @@ def contact(request):
 
 def about_developer(request):
     return render(request, 'main/developer_info.html')
+
+
+def events(request):
+    return render(request, 'main/events.html')
+
