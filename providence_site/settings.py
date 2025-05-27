@@ -138,6 +138,9 @@ import dj_database_url
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or any folder you prefer
 
+# Use basic storage instead of ManifestStaticFilesStorage to avoid missing manifest errors
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
 django_heroku.settings(locals())
 # Set secure proxy SSL header
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
