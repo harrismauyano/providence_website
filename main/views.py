@@ -25,3 +25,7 @@ def about_developer(request):
 def events(request):
     return render(request, 'main/events.html')
 
+
+def announcements(request):
+    return render(request, 'main/announcements.html')
+
