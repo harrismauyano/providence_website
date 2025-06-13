@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from main import views
+from blog import views
 from django.contrib import admin
 from django.urls import path, include
 
@@ -22,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),  # Direct root URL to main app
 
-    path('developer/', views.about_developer, name='developer'),
+    path('blog/', views.post_comment, name='post_comment'),
+
+     path('post_comment/', views.post_comment, name='post')
     # Add other paths here
 ]
