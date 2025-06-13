@@ -1,0 +1,7 @@
+<h2>Blog Admin Links</h2>
+<ul>
+    <li><a href="{% url 'admin:blog_post_changelist' %}">Manage Posts</a></li>
+    <li><a href="{% url 'admin:blog_post_add' %}">Create New Post</a></li>
+    <li><a href="{% url 'admin:blog_post_change' post.pk %}">Edit Post</a></li>
+    <li><a href="{% url 'admin:login' %}">Admin Login</a></li>
+</ul>

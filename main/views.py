@@ -29,3 +29,7 @@ def events(request):
 def announcements(request):
     return render(request, 'main/announcements.html')
 
+
+def blog(request):
+    return render(request, 'main/blog.html')
+
